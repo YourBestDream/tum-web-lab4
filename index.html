@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookie Delights - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
@@ -13,33 +19,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Mobile-only promo banner -->
-    <div class="mobile-promo-banner">
-      🍪 Limited time offer: Buy 2 dozen, get 1 dozen FREE! 🍪
+    <!-- Bootstrap Alert Banner for Mobile Promo -->
+    <div class="alert alert-warning alert-dismissible fade show m-0 d-md-none text-center" role="alert">
+      <i class="bi bi-cookie"></i> Limited time offer: Buy 2 dozen, get 1 dozen FREE! <i class="bi bi-cookie"></i>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
     <header>
-      <nav class="navigation">
-        <!-- Mobile menu toggle button -->
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+      <!-- Bootstrap Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #ffcc99;">
+        <div class="container">
+          <a class="navbar-brand fw-bold fs-3" href="#home" style="color: #663300; font-family: 'Georgia', serif;">Cookie Delights</a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="#about" style="color: #663300;">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="#cookies" style="color: #663300;">Our Cookies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="#testimonials" style="color: #663300;">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="#contact" style="color: #663300;">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
-        <ul class="navigation-list">
-          <li class="logo"><a href="#home">Cookie Delights</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#cookies">Our Cookies</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
       </nav>
-      <section id="home" class="hero">
-        <div class="hero-content">
-          <h1>Welcome to Cookie Delights</h1>
-          <p>Freshly baked cookies made with love and passion. Each bite brings joy and warmth to your day.</p>
-          <a href="#cookies" class="cta-button">Order Now</a>
+      <section id="home" class="hero position-relative d-flex align-items-center justify-content-center" style="height: 500px; background: url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e') center/cover no-repeat;">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 204, 153, 0.6);"></div>
+        <div class="container text-center position-relative" style="z-index: 1;">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h1 class="display-3 fw-bold mb-4" style="color: #663300; font-family: 'Georgia', serif; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);">Welcome to Cookie Delights</h1>
+              <p class="lead mb-4" style="color: #663300;">Freshly baked cookies made with love and passion. Each bite brings joy and warmth to your day.</p>
+              <a href="#cookies" class="btn btn-lg btn-dark rounded-pill px-4 py-3 fw-bold" style="background-color: #663300; border-color: #663300; letter-spacing: 1px;">Order Now</a>
+            </div>
+          </div>
         </div>
       </section>
     </header>
@@ -50,65 +73,96 @@
         <p>At Cookie Delights, we bake cookies daily using traditional recipes and the finest ingredients. Our passion for baking began over 20 years ago in a small family kitchen, and has since grown into a beloved local bakery. We believe that the perfect cookie combines quality ingredients, time-honored techniques, and a pinch of innovation. Our bakers rise early each morning to ensure that every cookie is freshly baked and delivered to you at peak perfection.</p>
       </section>
       
-      <section id="cookies" class="section">
-        <h2>Our Cookies</h2>
-        <p>Discover our range of delicious cookies including chocolate chip, oatmeal raisin, and seasonal specials. Each cookie is handcrafted with premium ingredients and baked to perfection. Our recipes have been refined over generations to create the perfect balance of flavors and textures.</p>
-        <div class="cookie-grid">
-          <div class="card">
-              <div class="card-photo"></div>
-              <div class="card-text">
-                  <h3 class="cookie-title">Oatmeal Raisin</h3>
-                  <p class="cookie-description">A hearty cookie made with rolled oats, plump raisins, and a hint of cinnamon. It's slightly chewy, subtly sweet, and feels like a cozy homemade treat.</p>
+      <div class="container-fluid">      
+        <!-- Cookies Section with Bootstrap Grid -->
+        <section id="cookies" class="py-5 bg-light align-items-center">
+          <div class="container">
+            <div class="text-center mb-5">
+              <h2 class="display-5 fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Our Cookies</h2>
+              <p class="lead">Discover our range of delicious cookies including chocolate chip, oatmeal raisin, and seasonal specials. Each cookie is handcrafted with premium ingredients and baked to perfection. Our recipes have been refined over generations to create the perfect balance of flavors and textures.</p>
+            </div>
+            
+            <!-- Bootstrap Grid for Cookie Cards -->
+            <div class="row g-4">
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-img-top" style="height: 200px; background-image: url('photo/Oatmeal.png'); background-size: cover; background-position: center;"></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Oatmeal Raisin</h5>
+                    <p class="card-text flex-grow-1">A hearty cookie made with rolled oats, plump raisins, and a hint of cinnamon. It's slightly chewy, subtly sweet, and feels like a cozy homemade treat.</p>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div class="card">
-              <div class="card-photo"></div>
-              <div class="card-text">
-                  <h3 class="cookie-title">Chocolate Chip</h3>
-                  <p class="cookie-description">Our signature cookie features premium chocolate chips in a buttery, soft dough. Each bite delivers the perfect balance of sweetness with rich chocolate morsels.</p>
+              
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-img-top" style="height: 200px; background-image: url('photo/Chocolate.png'); background-size: cover; background-position: center;"></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Chocolate Chip</h5>
+                    <p class="card-text flex-grow-1">Our signature cookie features premium chocolate chips in a buttery, soft dough. Each bite delivers the perfect balance of sweetness with rich chocolate morsels.</p>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div class="card">
-              <div class="card-photo"></div>
-              <div class="card-text">
-                  <h3 class="cookie-title">Peanut Butter</h3>
-                  <p class="cookie-description">Packed with rich peanut butter flavor, these cookies are soft, crumbly, and melt in your mouth. Often recognized by their signature fork-pressed crisscross pattern.</p>
+              
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-img-top" style="height: 200px; background-image: url('photo/Peanut.png'); background-size: cover; background-position: center;"></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Peanut Butter</h5>
+                    <p class="card-text flex-grow-1">Packed with rich peanut butter flavor, these cookies are soft, crumbly, and melt in your mouth. Often recognized by their signature fork-pressed crisscross pattern.</p>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div class="card">
-            <div class="card-photo"></div>
-            <div class="card-text">
-                <h3 class="cookie-title">Double Chocolate</h3>
-                <p class="cookie-description">For the true chocolate lover, these rich cookies combine dark chocolate dough with generous chunks of premium chocolate for an indulgent treat.</p>
+              
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-img-top" style="height: 200px; background-image: url('photo/Double.png'); background-size: cover; background-position: center;"></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Double Chocolate</h5>
+                    <p class="card-text flex-grow-1">For the true chocolate lover, these rich cookies combine dark chocolate dough with generous chunks of premium chocolate for an indulgent treat.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-img-top" style="height: 200px; background-image: url('photo/Snicker.png'); background-size: cover; background-position: center;"></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Snickerdoodle</h5>
+                    <p class="card-text flex-grow-1">A classic favorite with a soft, chewy texture coated in cinnamon sugar. The perfect balance of sweetness with a hint of tangy cream of tartar.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-img-top" style="height: 200px; background-image: url('photo/Lemon.png'); background-size: cover; background-position: center;"></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center fw-bold" style="color: #663300; font-family: 'Georgia', serif;">Lemon Sugar</h5>
+                    <p class="card-text flex-grow-1">Bright and refreshing, these delicate cookies feature real lemon zest and a light sugar coating for a perfectly balanced sweet-tart flavor.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-photo"></div>
-            <div class="card-text">
-                <h3 class="cookie-title">Snickerdoodle</h3>
-                <p class="cookie-description">A classic favorite with a soft, chewy texture coated in cinnamon sugar. The perfect balance of sweetness with a hint of tangy cream of tartar.</p>
+        </section>
+      </div>
+      <!-- Mobile Featured Cookie Section -->
+      <section id="mobile-featured" class="py-5 d-md-none" style="background-color: #fff3e0; border-left: 5px solid #ff9800;">
+        <div class="container">
+          <h2 class="text-center display-6 fw-bold mb-4" style="color: #663300; font-family: 'Georgia', serif;">Today's Featured Cookie</h2>
+          <div class="row justify-content-center">
+            <div class="col-10 col-sm-8">
+              <div class="card border-0 text-center">
+                <div class="mx-auto mb-4 rounded-circle border border-warning border-3 shadow" style="width: 200px; height: 200px; background-image: url('photo/Double.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-body">
+                  <h3 class="card-title fw-bold mb-3" style="color: #663300; font-family: 'Georgia', serif;">Double Chocolate</h3>
+                  <p class="card-text mb-3">Our most popular cookie! Rich chocolate dough loaded with premium chocolate chunks. Baked fresh daily and perfect with a glass of cold milk.</p>
+                  <p class="fw-bold fs-5 mb-4" style="color: #663300;">$2.50 each or $24 per dozen</p>
+                  <a href="#contact" class="btn btn-warning btn-lg rounded-pill px-4 fw-bold">Order Featured Cookie</a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-photo"></div>
-            <div class="card-text">
-                <h3 class="cookie-title">Lemon Sugar</h3>
-                <p class="cookie-description">Bright and refreshing, these delicate cookies feature real lemon zest and a light sugar coating for a perfectly balanced sweet-tart flavor.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Mobile-only featured cookie section -->
-      <section id="mobile-featured" class="section mobile-only-section">
-        <h2>Today's Featured Cookie</h2>
-        <div class="featured-cookie">
-          <div class="featured-photo"></div>
-          <div class="featured-details">
-            <h3>Double Chocolate</h3>
-            <p class="featured-description">Our most popular cookie! Rich chocolate dough loaded with premium chocolate chunks. Baked fresh daily and perfect with a glass of cold milk.</p>
-            <p class="featured-price">$2.50 each or $24 per dozen</p>
-            <a href="#contact" class="featured-button">Order Featured Cookie</a>
           </div>
         </div>
       </section>
@@ -158,7 +212,7 @@
     <footer>
       <p>&copy; 2025 Cookie Delights. All rights reserved.</p>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Mobile menu toggle functionality
       document.addEventListener('DOMContentLoaded', function() {
