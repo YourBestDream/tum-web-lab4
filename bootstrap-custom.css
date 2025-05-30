@@ -22,3 +22,43 @@
     border-color: #ffcc99 !important;
 }
 
+/* Enhanced Bootstrap navbar hover effects */
+.navbar-nav .nav-link:hover {
+    color: #804000 !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Custom Bootstrap button hover effects */
+.btn:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #804000 !important;
+    border-color: #804000 !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-warning:hover {
+    background-color: #e68a00 !important;
+    border-color: #e68a00 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Bootstrap card hover effects */
+.card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Bootstrap card image hover effects */
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
