@@ -1,0 +1,246 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Enhanced Navigation for mobile */
+@media (max-width: 768px) {
+    .navigation {
+        padding: 10px 0;
+    }
+    
+    .navigation-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navigation-list .logo a {
+        font-size: 24px;
+    }
+    
+    /* Mobile menu toggle button - mobile only element */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+        z-index: 200;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px 0;
+        background-color: #663300;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .navigation-list {
+        display: none; /* Hidden by default on mobile */
+        padding-top: 60px;
+    }
+    
+    .navigation-list.active {
+        display: flex;
+    }
+    
+    /* When menu is active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+/* Hero section adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    
+    /* Ensure CTA is prominently visible on mobile */
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 16px;
+        display: inline-block;
+        margin-top: 10px;
+        /* Add a pulsing animation to draw attention */
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+/* Section adjustments */
+@media (max-width: 768px) {
+    .section {
+        margin: 30px auto;
+        padding: 25px 15px;
+        border-radius: 8px;
+    }
+    
+    .section h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    #about p, #cookies > p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+/* Cookie grid adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .card-text {
+        padding: 15px;
+    }
+    
+    .cookie-title {
+        font-size: 20px;
+    }
+    
+    .cookie-description {
+        font-size: 14px;
+    }
+}
+
+/* Testimonials adjustments */
+@media (max-width: 768px) {
+    #testimonials {
+        padding: 30px 20px;
+    }
+    
+    .testimonial-item {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Contact section adjustments */
+@media (max-width: 768px) {
+    .contact-info {
+        gap: 20px;
+    }
+    
+    .contact-method {
+        min-width: auto;
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+    }
+    
+    .contact-method h3 {
+        font-size: 18px;
+    }
+}
+
+/* Mobile-only order now floating button */
+.mobile-order-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-order-button {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #663300;
+        color: #fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        text-decoration: none;
+        animation: float 2s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Mobile-only promo banner */
+.mobile-promo-banner {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-promo-banner {
+        display: block;
+        background-color: #ffcc99;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        color: #663300;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Small screen adjustments (phones) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .section h2 {
+        font-size: 24px;
+    }
+    
+    .cookie-grid {
+        gap: 20px;
+    }
+}

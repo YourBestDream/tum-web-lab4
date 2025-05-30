@@ -1,0 +1,110 @@
+/* Cookie Mascot Styles */
+.cookie-mascot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 150;
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cookie-mascot {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    animation: bounce 2s infinite alternate, rotate 15s infinite linear;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+  }
+  
+  .cookie-mascot:hover {
+    animation-play-state: paused;
+  }
+  
+  .cookie-message {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    background-color: #fff;
+    color: #663300;
+    border: 2px solid #ffcc99;
+    border-radius: 15px;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .cookie-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ffcc99;
+  }
+  
+  .cookie-mascot:hover + .cookie-message {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Animation for bouncing effect */
+  @keyframes bounce {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(15deg);
+    }
+    100% {
+      transform: translateY(0) rotate(-15deg);
+    }
+  }
+  
+  /* Animation for subtle rotation */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .cookie-mascot-container {
+      bottom: 100px;
+      right: 10px;
+    }
+    
+    .cookie-mascot {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .cookie-message {
+      width: 180px;
+      top: -70px;
+      right: -10px;
+      font-size: 13px;
+    }
+  }
