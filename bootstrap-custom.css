@@ -62,3 +62,29 @@
 .card:hover .card-img-top {
     transform: scale(1.1);
 }
+
+/* Custom Bootstrap alert styling */
+.alert-warning {
+    background-color: #ffcc99;
+    border-color: #ff9800;
+    color: #663300;
+    font-weight: bold;
+}
+
+/* Bootstrap floating button animation */
+.position-fixed .btn {
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
